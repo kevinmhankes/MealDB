@@ -1,6 +1,6 @@
 //
 //  FavoritesListVC.swift
-//  MealsDB
+//  MealDB
 //
 //  Created by Kevin Hankes on 1/29/22.
 //
