@@ -16,7 +16,7 @@ class DBTabBarController: UITabBarController {
     }
     
     func createMealCategoryNC() -> UINavigationController {
-        let searchCategoryVC = MealCategoryVC()
+        let searchCategoryVC = CategoryVC()
         searchCategoryVC.title = "Meal Categories"
         searchCategoryVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         

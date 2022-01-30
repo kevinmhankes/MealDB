@@ -12,7 +12,7 @@
 		F29D957B27A5DAFC00F09876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29D957A27A5DAFC00F09876 /* Assets.xcassets */; };
 		F29D957E27A5DAFC00F09876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29D957C27A5DAFC00F09876 /* LaunchScreen.storyboard */; };
 		F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958527A5DD8500F09876 /* DBTabBarController.swift */; };
-		F29D958827A5E13000F09876 /* MealCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958727A5E13000F09876 /* MealCategoryVC.swift */; };
+		F29D958827A5E13000F09876 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958727A5E13000F09876 /* CategoryVC.swift */; };
 		F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958927A5E25D00F09876 /* FavoritesListVC.swift */; };
 		F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54EB27A6546900D07E64 /* UIHelper.swift */; };
 		F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54EE27A6566800D07E64 /* MealCategory.swift */; };
@@ -29,6 +29,7 @@
 		F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */; };
 		F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */; };
 		F2FA551627A7210500D07E64 /* DBDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */; };
+		F2FA551827A722D600D07E64 /* MealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA551727A722D600D07E64 /* MealVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,7 @@
 		F29D957D27A5DAFC00F09876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29D957F27A5DAFC00F09876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29D958527A5DD8500F09876 /* DBTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTabBarController.swift; sourceTree = "<group>"; };
-		F29D958727A5E13000F09876 /* MealCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryVC.swift; sourceTree = "<group>"; };
+		F29D958727A5E13000F09876 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		F29D958927A5E25D00F09876 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		F2FA54EB27A6546900D07E64 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F2FA54EE27A6566800D07E64 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDataLoadingVC.swift; sourceTree = "<group>"; };
+		F2FA551727A722D600D07E64 /* MealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				F29D958927A5E25D00F09876 /* FavoritesListVC.swift */,
-				F29D958727A5E13000F09876 /* MealCategoryVC.swift */,
+				F29D958727A5E13000F09876 /* CategoryVC.swift */,
+				F2FA551727A722D600D07E64 /* MealVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -320,8 +323,9 @@
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
 				F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */,
 				F2FA54F927A661A200D07E64 /* DBAvatarImageView.swift in Sources */,
-				F29D958827A5E13000F09876 /* MealCategoryVC.swift in Sources */,
+				F29D958827A5E13000F09876 /* CategoryVC.swift in Sources */,
 				F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */,
+				F2FA551827A722D600D07E64 /* MealVC.swift in Sources */,
 				F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */,
 				F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */,
 				F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */,

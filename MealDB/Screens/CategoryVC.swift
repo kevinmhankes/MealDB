@@ -7,9 +7,10 @@
 
 import UIKit
 
-class MealCategoryVC: DBDataLoadingVC {
+class CategoryVC: DBDataLoadingVC {
     enum Section { case main }
     
+    var mealCategory: String!
     var mealCategories: [MealCategory] = []
     
     var collectionView: UICollectionView!
@@ -27,6 +28,7 @@ class MealCategoryVC: DBDataLoadingVC {
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
+        collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(MealCategoryCell.self, forCellWithReuseIdentifier: MealCategoryCell.reuseID)
     }
@@ -73,5 +75,17 @@ class MealCategoryVC: DBDataLoadingVC {
             cell.set(mealCategory: mealCategory)
             return cell
         })
+    }
+}
+
+extension CategoryVC: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mealCategory = mealCategories[indexPath.item]
+        
+        let destVC = MealVC()
+        destVC.category = mealCategory.strCategory
+        let navController = UINavigationController(rootViewController: destVC)
+        present(navController, animated: true)
     }
 }
