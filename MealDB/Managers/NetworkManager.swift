@@ -25,9 +25,7 @@ final class NetworkManager {
         let (data, _) = try await URLSession.shared.data(from: url)
         
         do {
-            let decoded = try decoder.decode(MealCategoryResponse.self, from: data)
-            print(decoded.categories)
-            return try decoder.decode(MealCategoryResponse.self, from: data).categories
+            return try decoder.decode(MealCategoryResponse.self, from: data).categories.sorted()
         } catch {
             throw DBError.invalidData
         }
