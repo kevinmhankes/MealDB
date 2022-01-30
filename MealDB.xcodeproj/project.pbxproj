@@ -23,6 +23,11 @@
 		F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */; };
 		F2FA54FF27A719F300D07E64 /* DBBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */; };
 		F2FA550127A71A2300D07E64 /* DBSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550027A71A2300D07E64 /* DBSecondaryTitleLabel.swift */; };
+		F2FA550327A71A7E00D07E64 /* DBAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550227A71A7E00D07E64 /* DBAlertVC.swift */; };
+		F2FA550627A71AB600D07E64 /* DBAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550527A71AB600D07E64 /* DBAlertContainerView.swift */; };
+		F2FA550927A71B2600D07E64 /* DBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550827A71B2600D07E64 /* DBButton.swift */; };
+		F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */; };
+		F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTitleLabel.swift; sourceTree = "<group>"; };
 		F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBBodyLabel.swift; sourceTree = "<group>"; };
 		F2FA550027A71A2300D07E64 /* DBSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		F2FA550227A71A7E00D07E64 /* DBAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAlertVC.swift; sourceTree = "<group>"; };
+		F2FA550527A71AB600D07E64 /* DBAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAlertContainerView.swift; sourceTree = "<group>"; };
+		F2FA550827A71B2600D07E64 /* DBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBButton.swift; sourceTree = "<group>"; };
+		F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +86,8 @@
 		F29D957027A5DAFB00F09876 /* MealDB */ = {
 			isa = PBXGroup;
 			children = (
+				F2FA550A27A71C5100D07E64 /* Extensions */,
 				F2FA54FC27A719DA00D07E64 /* CustomViews */,
-				F2FA54F327A65D2100D07E64 /* Alerts */,
 				F2FA54F027A656EC00D07E64 /* Managers */,
 				F2FA54ED27A655B200D07E64 /* Model */,
 				F2FA54EA27A6545000D07E64 /* Utilities */,
@@ -139,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FA54F427A65D3000D07E64 /* DBError.swift */,
+				F2FA550227A71A7E00D07E64 /* DBAlertVC.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -146,6 +157,9 @@
 		F2FA54FC27A719DA00D07E64 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				F2FA550727A71B1500D07E64 /* DBButton */,
+				F2FA550427A71A9D00D07E64 /* Views */,
+				F2FA54F327A65D2100D07E64 /* Alerts */,
 				F2FA54FD27A719E100D07E64 /* Labels */,
 			);
 			path = CustomViews;
@@ -159,6 +173,31 @@
 				F2FA550027A71A2300D07E64 /* DBSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		F2FA550427A71A9D00D07E64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA550527A71AB600D07E64 /* DBAlertContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2FA550727A71B1500D07E64 /* DBButton */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA550827A71B2600D07E64 /* DBButton.swift */,
+			);
+			path = DBButton;
+			sourceTree = "<group>";
+		};
+		F2FA550A27A71C5100D07E64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */,
+				F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,17 +270,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */,
 				F2FA550127A71A2300D07E64 /* DBSecondaryTitleLabel.swift in Sources */,
+				F2FA550627A71AB600D07E64 /* DBAlertContainerView.swift in Sources */,
 				F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */,
 				F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */,
+				F2FA550927A71B2600D07E64 /* DBButton.swift in Sources */,
 				F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */,
 				F2FA54FF27A719F300D07E64 /* DBBodyLabel.swift in Sources */,
+				F2FA550327A71A7E00D07E64 /* DBAlertVC.swift in Sources */,
 				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
 				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
 				F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */,
 				F2FA54F927A661A200D07E64 /* DBAvatarImageView.swift in Sources */,
 				F29D958827A5E13000F09876 /* MealCategoryVC.swift in Sources */,
+				F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */,
 				F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */,
 				F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */,
 				F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */,

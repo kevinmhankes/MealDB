@@ -37,7 +37,11 @@ class MealCategoryVC: UIViewController {
                 let mealCategories = try await NetworkManager.shared.getCategories()
                 updateUI(with: mealCategories)
             } catch {
-                throw DBError.unableToComplete
+                if let dbError = error as? DBError {
+                    presentDBAlert(title: "Something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
+                } else {
+                    presentDefaultError()
+                }
             }
         }
     }
