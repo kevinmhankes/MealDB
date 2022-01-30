@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MealCategoryVC: UIViewController {
+class MealCategoryVC: DBDataLoadingVC {
     enum Section { case main }
     
     var mealCategories: [MealCategory] = []
@@ -32,16 +32,21 @@ class MealCategoryVC: UIViewController {
     }
     
     func getMealCategories() {
+        showLoadingView()
+        
         Task {
             do {
                 let mealCategories = try await NetworkManager.shared.getCategories()
                 updateUI(with: mealCategories)
+                dismissLoadingView()
             } catch {
                 if let dbError = error as? DBError {
                     presentDBAlert(title: "Something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
                 } else {
                     presentDefaultError()
                 }
+                
+                dismissLoadingView()
             }
         }
     }

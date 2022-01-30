@@ -28,6 +28,7 @@
 		F2FA550927A71B2600D07E64 /* DBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550827A71B2600D07E64 /* DBButton.swift */; };
 		F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */; };
 		F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */; };
+		F2FA551627A7210500D07E64 /* DBDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F2FA550827A71B2600D07E64 /* DBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBButton.swift; sourceTree = "<group>"; };
 		F2FA550B27A71C6100D07E64 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDataLoadingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,6 @@
 				F2FA54E927A653C100D07E64 /* Screens */,
 				F29D958B27A5E48000F09876 /* Support */,
 				F29D957F27A5DAFC00F09876 /* Info.plist */,
-				F29D958527A5DD8500F09876 /* DBTabBarController.swift */,
-				F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */,
-				F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */,
 			);
 			path = MealDB;
 			sourceTree = "<group>";
@@ -157,6 +156,10 @@
 		F2FA54FC27A719DA00D07E64 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				F2FA551427A720EE00D07E64 /* ViewControllers */,
+				F2FA551327A7205800D07E64 /* ImageView */,
+				F2FA551227A7202500D07E64 /* Cells */,
+				F2FA551127A7201400D07E64 /* TabBarControllers */,
 				F2FA550727A71B1500D07E64 /* DBButton */,
 				F2FA550427A71A9D00D07E64 /* Views */,
 				F2FA54F327A65D2100D07E64 /* Alerts */,
@@ -198,6 +201,38 @@
 				F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2FA551127A7201400D07E64 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F29D958527A5DD8500F09876 /* DBTabBarController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		F2FA551227A7202500D07E64 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F2FA551327A7205800D07E64 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		F2FA551427A720EE00D07E64 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +308,7 @@
 				F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */,
 				F2FA550127A71A2300D07E64 /* DBSecondaryTitleLabel.swift in Sources */,
 				F2FA550627A71AB600D07E64 /* DBAlertContainerView.swift in Sources */,
+				F2FA551627A7210500D07E64 /* DBDataLoadingVC.swift in Sources */,
 				F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */,
 				F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */,
 				F2FA550927A71B2600D07E64 /* DBButton.swift in Sources */,
