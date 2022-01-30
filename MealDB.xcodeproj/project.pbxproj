@@ -30,6 +30,7 @@
 		F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */; };
 		F2FA551627A7210500D07E64 /* DBDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */; };
 		F2FA551827A722D600D07E64 /* MealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA551727A722D600D07E64 /* MealVC.swift */; };
+		F2FA551A27A72BF900D07E64 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA551927A72BF900D07E64 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F2FA550F27A71CD600D07E64 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDataLoadingVC.swift; sourceTree = "<group>"; };
 		F2FA551727A722D600D07E64 /* MealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealVC.swift; sourceTree = "<group>"; };
+		F2FA551927A72BF900D07E64 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FA54EE27A6566800D07E64 /* MealCategory.swift */,
+				F2FA551927A72BF900D07E64 /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */,
 				F2FA54FF27A719F300D07E64 /* DBBodyLabel.swift in Sources */,
 				F2FA550327A71A7E00D07E64 /* DBAlertVC.swift in Sources */,
+				F2FA551A27A72BF900D07E64 /* Meal.swift in Sources */,
 				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
 				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
