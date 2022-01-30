@@ -21,6 +21,8 @@
 		F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */; };
 		F2FA54F927A661A200D07E64 /* DBAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */; };
 		F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */; };
+		F2FA54FF27A719F300D07E64 /* DBBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */; };
+		F2FA550127A71A2300D07E64 /* DBSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA550027A71A2300D07E64 /* DBSecondaryTitleLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryCell.swift; sourceTree = "<group>"; };
 		F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAvatarImageView.swift; sourceTree = "<group>"; };
 		F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTitleLabel.swift; sourceTree = "<group>"; };
+		F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBBodyLabel.swift; sourceTree = "<group>"; };
+		F2FA550027A71A2300D07E64 /* DBSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,7 @@
 		F29D957027A5DAFB00F09876 /* MealDB */ = {
 			isa = PBXGroup;
 			children = (
-				F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */,
+				F2FA54FC27A719DA00D07E64 /* CustomViews */,
 				F2FA54F327A65D2100D07E64 /* Alerts */,
 				F2FA54F027A656EC00D07E64 /* Managers */,
 				F2FA54ED27A655B200D07E64 /* Model */,
@@ -137,6 +141,24 @@
 				F2FA54F427A65D3000D07E64 /* DBError.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		F2FA54FC27A719DA00D07E64 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54FD27A719E100D07E64 /* Labels */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F2FA54FD27A719E100D07E64 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */,
+				F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */,
+				F2FA550027A71A2300D07E64 /* DBSecondaryTitleLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FA550127A71A2300D07E64 /* DBSecondaryTitleLabel.swift in Sources */,
 				F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */,
 				F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */,
 				F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */,
+				F2FA54FF27A719F300D07E64 /* DBBodyLabel.swift in Sources */,
 				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
 				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
