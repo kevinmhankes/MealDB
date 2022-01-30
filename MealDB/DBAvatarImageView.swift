@@ -24,6 +24,7 @@ class DBAvatarImageView: UIImageView {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
+        contentMode = .center
         image = placeholderImage
         translatesAutoresizingMaskIntoConstraints = false
     }
