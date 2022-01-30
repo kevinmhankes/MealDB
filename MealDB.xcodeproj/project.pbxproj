@@ -14,6 +14,13 @@
 		F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958527A5DD8500F09876 /* DBTabBarController.swift */; };
 		F29D958827A5E13000F09876 /* MealCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958727A5E13000F09876 /* MealCategoryVC.swift */; };
 		F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958927A5E25D00F09876 /* FavoritesListVC.swift */; };
+		F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54EB27A6546900D07E64 /* UIHelper.swift */; };
+		F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54EE27A6566800D07E64 /* MealCategory.swift */; };
+		F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F127A656F400D07E64 /* NetworkManager.swift */; };
+		F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F427A65D3000D07E64 /* DBError.swift */; };
+		F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */; };
+		F2FA54F927A661A200D07E64 /* DBAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */; };
+		F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		F29D958527A5DD8500F09876 /* DBTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTabBarController.swift; sourceTree = "<group>"; };
 		F29D958727A5E13000F09876 /* MealCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryVC.swift; sourceTree = "<group>"; };
 		F29D958927A5E25D00F09876 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		F2FA54EB27A6546900D07E64 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		F2FA54EE27A6566800D07E64 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
+		F2FA54F127A656F400D07E64 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F2FA54F427A65D3000D07E64 /* DBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
+		F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryCell.swift; sourceTree = "<group>"; };
+		F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAvatarImageView.swift; sourceTree = "<group>"; };
+		F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTitleLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +72,17 @@
 		F29D957027A5DAFB00F09876 /* MealDB */ = {
 			isa = PBXGroup;
 			children = (
+				F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */,
+				F2FA54F327A65D2100D07E64 /* Alerts */,
+				F2FA54F027A656EC00D07E64 /* Managers */,
+				F2FA54ED27A655B200D07E64 /* Model */,
+				F2FA54EA27A6545000D07E64 /* Utilities */,
+				F2FA54E927A653C100D07E64 /* Screens */,
 				F29D958B27A5E48000F09876 /* Support */,
 				F29D957F27A5DAFC00F09876 /* Info.plist */,
 				F29D958527A5DD8500F09876 /* DBTabBarController.swift */,
-				F29D958727A5E13000F09876 /* MealCategoryVC.swift */,
-				F29D958927A5E25D00F09876 /* FavoritesListVC.swift */,
+				F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */,
+				F2FA54F827A661A200D07E64 /* DBAvatarImageView.swift */,
 			);
 			path = MealDB;
 			sourceTree = "<group>";
@@ -76,6 +96,47 @@
 				F29D957127A5DAFB00F09876 /* AppDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		F2FA54E927A653C100D07E64 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F29D958927A5E25D00F09876 /* FavoritesListVC.swift */,
+				F29D958727A5E13000F09876 /* MealCategoryVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F2FA54EA27A6545000D07E64 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54EB27A6546900D07E64 /* UIHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F2FA54ED27A655B200D07E64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54EE27A6566800D07E64 /* MealCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2FA54F027A656EC00D07E64 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54F127A656F400D07E64 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F2FA54F327A65D2100D07E64 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				F2FA54F427A65D3000D07E64 /* DBError.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +209,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */,
 				F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */,
 				F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */,
+				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
+				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
+				F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */,
+				F2FA54F927A661A200D07E64 /* DBAvatarImageView.swift in Sources */,
 				F29D958827A5E13000F09876 /* MealCategoryVC.swift in Sources */,
+				F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */,
 				F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */,
+				F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
