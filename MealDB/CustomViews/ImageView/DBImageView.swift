@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DBAvatarImageView: UIImageView {
+class DBImageView: UIImageView {
 
     let cache = NetworkManager.shared.cache
     let placeholderImage = UIImage(named: "placeholder-image")
@@ -24,7 +24,7 @@ class DBAvatarImageView: UIImageView {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        contentMode = .center
+        contentMode = .scaleAspectFit
         image = placeholderImage
         translatesAutoresizingMaskIntoConstraints = false
     }

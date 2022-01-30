@@ -10,7 +10,7 @@ import UIKit
 class MealCategoryCell: UICollectionViewCell {
     static let reuseID = "MealCategoryCell"
     
-    let mealCategoryImageView = DBAvatarImageView(frame: .zero)
+    let mealCategoryImageView = DBImageView(frame: .zero)
     let categoryLabel = DBTitleLabel(textAlignment: .center, fontSize: 16)
     
     override init(frame: CGRect) {

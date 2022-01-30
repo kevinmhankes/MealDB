@@ -19,7 +19,8 @@ class CategoryVC: DBDataLoadingVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .systemGreen
         configureCollectionView()
         getMealCategories()
         configureDataSource()
@@ -83,9 +84,7 @@ extension CategoryVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mealCategory = mealCategories[indexPath.item]
         
-        let destVC = MealVC()
-        destVC.category = mealCategory.strCategory
-        let navController = UINavigationController(rootViewController: destVC)
-        present(navController, animated: true)
+        let destVC = MealVC(category: mealCategory.strCategory)
+        navigationController?.pushViewController(destVC, animated: true)
     }
 }
