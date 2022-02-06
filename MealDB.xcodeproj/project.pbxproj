@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2576D0727B084EC00F2B50F /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2576D0627B084EC00F2B50F /* MealDetail.swift */; };
 		F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D957127A5DAFB00F09876 /* AppDelegate.swift */; };
 		F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D957327A5DAFB00F09876 /* SceneDelegate.swift */; };
 		F29D957B27A5DAFC00F09876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29D957A27A5DAFC00F09876 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2576D0627B084EC00F2B50F /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		F29D956E27A5DAFB00F09876 /* MealDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29D957127A5DAFB00F09876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29D957327A5DAFB00F09876 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				F2FA54EE27A6566800D07E64 /* MealCategory.swift */,
 				F2FA551927A72BF900D07E64 /* Meal.swift */,
+				F2576D0627B084EC00F2B50F /* MealDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */,
 				F2FA551827A722D600D07E64 /* MealVC.swift in Sources */,
 				F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */,
+				F2576D0727B084EC00F2B50F /* MealDetail.swift in Sources */,
 				F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */,
 				F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */,
 			);

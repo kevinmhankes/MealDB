@@ -15,6 +15,7 @@ final class NetworkManager {
     
     private let categoriesURL = baseURL + "categories.php"
     private let mealsURL = baseURL + "filter.php?c="
+    private let recipesURL = baseURL + "lookup.php?i="
     
     private init() {}
     
@@ -41,6 +42,20 @@ final class NetworkManager {
         
         do {
             return try decoder.decode(MealResponse.self, from: data).meals.sorted()
+        } catch {
+            throw DBError.invalidData
+        }
+    }
+    
+    func getMealDetail(for mealID: String) async throws -> MealDetail {
+        guard let url = URL(string: "\(recipesURL)\(mealID)") else {
+            throw DBError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            return try decoder.decode(MealDetailResponse.self, from: data).meals.first!
         } catch {
             throw DBError.invalidData
         }
