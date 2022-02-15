@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F24237ED27BC292C00106237 /* DBMealDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24237EC27BC292C00106237 /* DBMealDetailHeader.swift */; };
 		F2576D0727B084EC00F2B50F /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2576D0627B084EC00F2B50F /* MealDetail.swift */; };
 		F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D957127A5DAFB00F09876 /* AppDelegate.swift */; };
 		F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D957327A5DAFB00F09876 /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F24237EC27BC292C00106237 /* DBMealDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBMealDetailHeader.swift; sourceTree = "<group>"; };
 		F2576D0627B084EC00F2B50F /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		F29D956E27A5DAFB00F09876 /* MealDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29D957127A5DAFB00F09876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FA551527A7210500D07E64 /* DBDataLoadingVC.swift */,
+				F24237EC27BC292C00106237 /* DBMealDetailHeader.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				F2FA551A27A72BF900D07E64 /* Meal.swift in Sources */,
 				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
 				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
+				F24237ED27BC292C00106237 /* DBMealDetailHeader.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
 				F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */,
 				F2FA552027A7352000D07E64 /* MealDetailVC.swift in Sources */,
