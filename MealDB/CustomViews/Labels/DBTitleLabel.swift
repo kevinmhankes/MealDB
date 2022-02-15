@@ -28,7 +28,8 @@ class DBTitleLabel: UILabel {
         textColor = .label
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90
-        lineBreakMode = .byTruncatingTail
+        lineBreakMode = .byWordWrapping
+        numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
     }
 

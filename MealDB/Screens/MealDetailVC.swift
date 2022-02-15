@@ -22,7 +22,6 @@ class MealDetailVC: DBDataLoadingVC {
     init(mealID: String, mealName: String) {
         super.init(nibName: nil, bundle: nil)
         self.mealID = mealID
-        title = mealName
     }
     
     required init?(coder: NSCoder) {
