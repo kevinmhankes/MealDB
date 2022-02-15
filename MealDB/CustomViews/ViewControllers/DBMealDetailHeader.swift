@@ -44,9 +44,9 @@ class DBMealDetailHeader: UIViewController {
         
         NSLayoutConstraint.activate([
             mealTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
-            mealTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mealTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mealTitle.heightAnchor.constraint(equalToConstant: 30),
+            mealTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            mealTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            mealTitle.heightAnchor.constraint(equalToConstant: 32),
             
             mealImageView.topAnchor.constraint(equalTo: mealTitle.bottomAnchor, constant: padding),
             mealImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -56,7 +56,7 @@ class DBMealDetailHeader: UIViewController {
             mealInstructions.topAnchor.constraint(equalTo: mealImageView.bottomAnchor, constant: padding),
             mealInstructions.leadingAnchor.constraint(equalTo: mealTitle.leadingAnchor),
             mealInstructions.trailingAnchor.constraint(equalTo: mealTitle.trailingAnchor),
-            mealInstructions.heightAnchor.constraint(equalToConstant: 500)
+            mealInstructions.heightAnchor.constraint(equalToConstant: 1500)
         ])
     }
 

@@ -134,7 +134,7 @@ struct MealDetail: Decodable {
         
         // Remove carriage returns for string
         let unsanitizedInstructions = try container.decode(String.self, forKey: .strInstructions)
-        strInstructions = unsanitizedInstructions.replacingOccurrences(of: "\r\n", with: "\n\n")
+        strInstructions = unsanitizedInstructions.replacingOccurrences(of: "\r\n", with: "\n")
         
     }
     

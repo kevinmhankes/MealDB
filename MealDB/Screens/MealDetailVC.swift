@@ -52,7 +52,7 @@ class MealDetailVC: DBDataLoadingVC {
         
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 1000)
+            contentView.heightAnchor.constraint(equalToConstant: 2500)
         ])
     }
     
@@ -88,8 +88,8 @@ class MealDetailVC: DBDataLoadingVC {
         mealDetailHeader.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            mealDetailHeader.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            mealDetailHeader.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            mealDetailHeader.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            mealDetailHeader.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             mealDetailHeader.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
             mealDetailHeader.heightAnchor.constraint(equalToConstant: 1000)
         ])
