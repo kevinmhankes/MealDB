@@ -51,7 +51,7 @@ class MealDetailVC: DBDataLoadingVC {
         
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 2500)
+            contentView.heightAnchor.constraint(equalToConstant: 2000)
         ])
     }
     
