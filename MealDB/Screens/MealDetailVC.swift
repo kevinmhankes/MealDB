@@ -82,7 +82,6 @@ class MealDetailVC: DBDataLoadingVC {
     }
     
     func layoutUI() {
-        let padding: CGFloat = 20
         contentView.addSubview(mealDetailHeader)
         
         mealDetailHeader.translatesAutoresizingMaskIntoConstraints = false
