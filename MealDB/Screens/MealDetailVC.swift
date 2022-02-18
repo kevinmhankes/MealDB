@@ -12,9 +12,13 @@ class MealDetailVC: DBDataLoadingVC {
     let scrollView = UIScrollView()
     let contentView = UIView()
     
-    let mealDetailHeader = UIView()
-    
-    var mealName: String!
+    let mealImageView = DBImageView(frame: .zero)
+    let mealTitle = DBTitleLabel(textAlignment: .center, fontSize: 28)
+    let mealInstructionLabel = DBSecondaryTitleLabel(fontSize: 22)
+    let mealInstructions = DBBodyLabel(textAlignment: .left)
+    let mealIngredientsLabel = DBSecondaryTitleLabel(fontSize: 22)
+    let mealIngredients = DBBodyLabel(textAlignment: .left)
+        
     var mealID: String!
     
     var mealDetail: MealDetail!
@@ -51,7 +55,7 @@ class MealDetailVC: DBDataLoadingVC {
         
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 2000)
+            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 1000)
         ])
     }
     
@@ -61,7 +65,7 @@ class MealDetailVC: DBDataLoadingVC {
         Task {
             do {
                 let mealDetail = try await NetworkManager.shared.getMealDetail(for: mealID)
-                configureUIElements(with: mealDetail)
+                updateUI(with: mealDetail)
                 print(mealDetail)
                 dismissLoadingView()
             } catch {
@@ -76,28 +80,77 @@ class MealDetailVC: DBDataLoadingVC {
         }
     }
     
-    func configureUIElements(with mealDetail: MealDetail) {
-        self.add(childVC: DBMealDetailHeader(mealDetail: mealDetail), to: self.mealDetailHeader)
-    }
-    
     func layoutUI() {
-        contentView.addSubview(mealDetailHeader)
-        
-        mealDetailHeader.translatesAutoresizingMaskIntoConstraints = false
-        
+        contentView.addSubviews(mealImageView, mealTitle, mealInstructionLabel, mealInstructions, mealIngredientsLabel, mealIngredients)
+
+        let padding: CGFloat = 20
+        let imageHeightWidth: CGFloat = 300
+
         NSLayoutConstraint.activate([
-            mealDetailHeader.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            mealDetailHeader.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            mealDetailHeader.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
-            mealDetailHeader.heightAnchor.constraint(equalToConstant: 1000)
+            mealTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            mealTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            mealTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+
+            mealImageView.topAnchor.constraint(equalTo: mealTitle.bottomAnchor, constant: padding),
+            mealImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            mealImageView.heightAnchor.constraint(equalToConstant: imageHeightWidth),
+            mealImageView.widthAnchor.constraint(equalToConstant: imageHeightWidth),
+
+            mealInstructionLabel.topAnchor.constraint(equalTo: mealImageView.bottomAnchor, constant: padding),
+            mealInstructionLabel.leadingAnchor.constraint(equalTo: mealTitle.leadingAnchor),
+            mealInstructionLabel.trailingAnchor.constraint(equalTo: mealTitle.trailingAnchor),
+            mealInstructionLabel.heightAnchor.constraint(equalToConstant: 24),
+
+            mealInstructions.topAnchor.constraint(equalTo: mealInstructionLabel.bottomAnchor, constant: padding),
+            mealInstructions.leadingAnchor.constraint(equalTo: mealTitle.leadingAnchor),
+            mealInstructions.trailingAnchor.constraint(equalTo: mealTitle.trailingAnchor),
+            
+            mealIngredientsLabel.topAnchor.constraint(equalTo: mealInstructions.bottomAnchor, constant: padding),
+            mealIngredientsLabel.leadingAnchor.constraint(equalTo: mealTitle.leadingAnchor),
+            mealIngredientsLabel.trailingAnchor.constraint(equalTo: mealTitle.trailingAnchor),
+            mealIngredientsLabel.heightAnchor.constraint(equalToConstant: 24),
+            
+            mealIngredients.topAnchor.constraint(equalTo: mealIngredientsLabel.bottomAnchor, constant: padding),
+            mealIngredients.leadingAnchor.constraint(equalTo: mealTitle.leadingAnchor),
+            mealIngredients.trailingAnchor.constraint(equalTo: mealTitle.trailingAnchor),
+            mealIngredients.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     
-    func add(childVC: UIViewController, to containerView: UIView) {
-        addChild(childVC)
-        containerView.addSubview(childVC.view)
-        childVC.view.frame = containerView.frame
-        childVC.didMove(toParent: self)
+    func updateUI(with mealDetail: MealDetail) {
+        mealImageView.downloadImage(fromURL: mealDetail.strMealThumb)
+
+        mealTitle.text = mealDetail.strMeal
+        mealTitle.numberOfLines = 0
+        mealTitle.sizeToFit()
+
+        mealInstructionLabel.text = "Instructions:"
+
+        mealInstructions.text = mealDetail.strInstructions
+        mealInstructions.numberOfLines = 0
+        mealInstructions.sizeToFit()
+        
+        mealIngredientsLabel.text = "Ingredients:"
+        
+        mealIngredients.text = listMealIngredients(ingredients: mealDetail.ingredients)
+        mealIngredients.numberOfLines = 0
+        mealIngredients.sizeToFit()
+        
+        scrollView.layoutIfNeeded()
+    }
+    
+    func listMealIngredients(ingredients: [Ingredient]) -> String {
+        var ingredientString = ""
+        for (index, ingredient) in ingredients.enumerated() {
+            ingredientString.append("\(ingredient.ingredient)")
+            if (!ingredient.measurement.isEmpty) {
+                ingredientString.append(" \(ingredient.measurement)")
+            }
+            if index < ingredients.count - 1 {
+                ingredientString.append(", ")
+            }
+        }
+        return ingredientString
     }
     
     @objc func dismissVC() {

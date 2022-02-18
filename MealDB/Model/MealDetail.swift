@@ -12,8 +12,15 @@ struct MealDetail: Decodable {
     var strMeal: String
     var strInstructions: String
     var strMealThumb: String
-    var ingredientList: [String]
-    var measurementList: [String]
+    var ingredients: [Ingredient]
+    
+    init() {
+        idMeal = ""
+        strMeal = ""
+        strInstructions = ""
+        strMealThumb = ""
+        ingredients = []
+    }
     
     enum CodingKeys: String, CodingKey {
         case idMeal
@@ -67,8 +74,9 @@ struct MealDetail: Decodable {
     }
     
     init(from decoder: Decoder) throws {
-        ingredientList = []
-        measurementList = []
+        ingredients = []
+        var ingredientList: [String] = []
+        var measurementList: [String] = []
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -128,6 +136,18 @@ struct MealDetail: Decodable {
             }
         }
         
+        // assumption based on the idea that there can be more ingredients than measurements, but not more measurements than ingredients
+        // alternative option would just be having the two lists in the MealDetail struct
+        for i in 0..<ingredientList.count {
+            var ingredient: Ingredient
+            if i < measurementList.count {
+                ingredient = Ingredient(ingredient: ingredientList[i], measurement: measurementList[i])
+            } else {
+                ingredient = Ingredient(ingredient: ingredientList[i], measurement: "")
+            }
+            ingredients.append(ingredient)
+        }
+        
         idMeal = try container.decode(String.self, forKey: .idMeal)
         strMeal = try container.decode(String.self, forKey: .strMeal)
         strMealThumb = try container.decode(String.self, forKey: .strMealThumb)
@@ -135,11 +155,15 @@ struct MealDetail: Decodable {
         // Remove carriage returns for string
         let unsanitizedInstructions = try container.decode(String.self, forKey: .strInstructions)
         strInstructions = unsanitizedInstructions.replacingOccurrences(of: "\r\n", with: "\n")
-        
     }
     
 }
 
 struct MealDetailResponse: Decodable {
     var meals: [MealDetail]
+}
+
+struct Ingredient {
+    var ingredient: String
+    var measurement: String
 }

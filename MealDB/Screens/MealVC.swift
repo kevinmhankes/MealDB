@@ -77,7 +77,6 @@ class MealVC: DBDataLoadingVC {
         self.meals = meals
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            self.view.bringSubviewToFront(self.tableView)
         }
     }
 }
