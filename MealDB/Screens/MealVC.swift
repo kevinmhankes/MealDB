@@ -96,7 +96,7 @@ extension MealVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let meal = meals[indexPath.row]
-        let destVC = MealDetailVC(mealID: meal.idMeal, mealName: meal.strMeal)
+        let destVC = MealDetailVC(mealID: meal.idMeal)
         let navController = UINavigationController(rootViewController: destVC)
         present(navController, animated: true)
     }

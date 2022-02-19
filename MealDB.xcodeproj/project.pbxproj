@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F23D042F27C01FFB00DAE656 /* MealDetailIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D042E27C01FFB00DAE656 /* MealDetailIngredientCell.swift */; };
+		F23D043127C05B2100DAE656 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D043027C05B2100DAE656 /* PersistenceManager.swift */; };
+		F23D043327C0614D00DAE656 /* DBEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D043227C0614D00DAE656 /* DBEmptyStateView.swift */; };
+		F23D043527C0626F00DAE656 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D043427C0626F00DAE656 /* Constants.swift */; };
 		F2576D0727B084EC00F2B50F /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2576D0627B084EC00F2B50F /* MealDetail.swift */; };
 		F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D957127A5DAFB00F09876 /* AppDelegate.swift */; };
 		F29D957427A5DAFB00F09876 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D957327A5DAFB00F09876 /* SceneDelegate.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		F23D042E27C01FFB00DAE656 /* MealDetailIngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailIngredientCell.swift; sourceTree = "<group>"; };
+		F23D043027C05B2100DAE656 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		F23D043227C0614D00DAE656 /* DBEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBEmptyStateView.swift; sourceTree = "<group>"; };
+		F23D043427C0626F00DAE656 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2576D0627B084EC00F2B50F /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		F29D956E27A5DAFB00F09876 /* MealDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29D957127A5DAFB00F09876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FA54EB27A6546900D07E64 /* UIHelper.swift */,
+				F23D043427C0626F00DAE656 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FA54F127A656F400D07E64 /* NetworkManager.swift */,
+				F23D043027C05B2100DAE656 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FA550527A71AB600D07E64 /* DBAlertContainerView.swift */,
+				F23D043227C0614D00DAE656 /* DBEmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				F2FA551027A71CD600D07E64 /* UIViewController+Ext.swift in Sources */,
 				F2FA550127A71A2300D07E64 /* DBSecondaryTitleLabel.swift in Sources */,
 				F2FA550627A71AB600D07E64 /* DBAlertContainerView.swift in Sources */,
+				F23D043527C0626F00DAE656 /* Constants.swift in Sources */,
 				F2FA551627A7210500D07E64 /* DBDataLoadingVC.swift in Sources */,
 				F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */,
 				F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */,
@@ -341,9 +351,11 @@
 				F23D042F27C01FFB00DAE656 /* MealDetailIngredientCell.swift in Sources */,
 				F2FA551A27A72BF900D07E64 /* Meal.swift in Sources */,
 				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
+				F23D043127C05B2100DAE656 /* PersistenceManager.swift in Sources */,
 				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
 				F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */,
+				F23D043327C0614D00DAE656 /* DBEmptyStateView.swift in Sources */,
 				F2FA552027A7352000D07E64 /* MealDetailVC.swift in Sources */,
 				F2FA54F927A661A200D07E64 /* DBImageView.swift in Sources */,
 				F29D958827A5E13000F09876 /* CategoryVC.swift in Sources */,

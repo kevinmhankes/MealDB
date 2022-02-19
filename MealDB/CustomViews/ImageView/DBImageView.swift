@@ -10,7 +10,7 @@ import UIKit
 class DBImageView: UIImageView {
 
     let cache = NetworkManager.shared.cache
-    let placeholderImage = UIImage(named: "placeholder-image")
+    let placeholderImage = Images.placeholderImage
 
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -20,10 +20,8 @@ class MealDetailVC: DBDataLoadingVC {
     let mealIngredients = DBBodyLabel(textAlignment: .left)
         
     var mealID: String!
-    
-    var mealDetail: MealDetail!
-    
-    init(mealID: String, mealName: String) {
+        
+    init(mealID: String) {
         super.init(nibName: nil, bundle: nil)
         self.mealID = mealID
     }
@@ -42,8 +40,12 @@ class MealDetailVC: DBDataLoadingVC {
     
     func configureViewController() {
         view.backgroundColor = .systemBackground
+        
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
-        navigationItem.rightBarButtonItem = doneButton
+        navigationItem.leftBarButtonItem = doneButton
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     func configureScrollView() {
@@ -137,6 +139,44 @@ class MealDetailVC: DBDataLoadingVC {
         mealIngredients.sizeToFit()
         
         scrollView.layoutIfNeeded()
+    }
+    
+    @objc func addButtonTapped() {
+        showLoadingView()
+        
+        Task {
+            do {
+                let mealDetail = try await NetworkManager.shared.getMealDetail(for: mealID)
+                addMealToFavorites(mealDetail: mealDetail)
+                dismissLoadingView()
+            } catch {
+                if let dbError = error as? DBError {
+                    presentDBAlert(title: "Something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
+                } else {
+                    presentDefaultError()
+                }
+                
+                dismissLoadingView()
+            }
+        }
+    }
+    
+    func addMealToFavorites(mealDetail: MealDetail) {
+        let meal = Meal(strMeal: mealDetail.strMeal, strMealThumb: mealDetail.strMealThumb, idMeal: mealDetail.idMeal)
+        
+        PersistenceManager.updateWith(meal: meal, actionType: .add) { [weak self] error in
+            guard let self = self else { return }
+            guard let error = error else {
+                DispatchQueue.main.async {
+                    self.presentDBAlert(title: "Success", message: "You have successfully favorited this meal! 🎉", buttonTitle: "Awesome!")
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.presentDBAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            }
+        }
     }
     
     func listMealIngredients(ingredients: [Ingredient]) -> String {

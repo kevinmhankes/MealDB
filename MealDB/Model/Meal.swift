@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meal: Decodable, Hashable, Comparable {
+struct Meal: Codable, Hashable, Comparable {
     var strMeal: String
     var strMealThumb: String
     var idMeal: String

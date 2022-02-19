@@ -26,4 +26,10 @@ extension UIViewController {
         alertVC.modalTransitionStyle = .crossDissolve
         present(alertVC, animated: true)
     }
+    
+    func showEmptyStateView(with message: String, in view: UIView) {
+        let emptyStateView = DBEmptyStateView(messageLabel: message)
+        emptyStateView.frame = view.bounds
+        view.addSubview(emptyStateView)
+    }
 }
