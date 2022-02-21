@@ -14,21 +14,13 @@ struct MealDetail: Decodable {
     var strMealThumb: String
     var ingredients: [Ingredient]
     
-    init() {
-        idMeal = ""
-        strMeal = ""
-        strInstructions = ""
-        strMealThumb = ""
-        ingredients = []
-    }
-    
     enum CodingKeys: String, CodingKey {
         case idMeal
         case strMeal
         case strInstructions
         case strMealThumb
         
-        // Ingredient list...why isn't this an array to begin with?
+        // Ingredient list...this should probably have been an array...
         case strIngredient1
         case strIngredient2
         case strIngredient3
@@ -50,7 +42,7 @@ struct MealDetail: Decodable {
         case strIngredient19
         case strIngredient20
         
-        // Corresponding measurement list...why isn't this also in an array to begin with?
+        // Corresponding measurement list...this should also probably be an array
         case strMeasure1
         case strMeasure2
         case strMeasure3
@@ -157,6 +149,22 @@ struct MealDetail: Decodable {
         strInstructions = unsanitizedInstructions.replacingOccurrences(of: "\r\n", with: "\n")
     }
     
+}
+
+extension MealDetail {
+    func mealIngredientsToString() -> String {
+        var ingredientString = ""
+        for (index, ingredient) in self.ingredients.enumerated() {
+            ingredientString.append("\(ingredient.ingredient)")
+            if (!ingredient.measurement.isEmpty) {
+                ingredientString.append(" \(ingredient.measurement)")
+            }
+            if index < self.ingredients.count - 1 {
+                ingredientString.append(", ")
+            }
+        }
+        return ingredientString
+    }
 }
 
 struct MealDetailResponse: Decodable {

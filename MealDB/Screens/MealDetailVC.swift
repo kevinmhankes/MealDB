@@ -124,19 +124,16 @@ class MealDetailVC: DBDataLoadingVC {
 
         mealTitle.text = mealDetail.strMeal
         mealTitle.numberOfLines = 0
-        mealTitle.sizeToFit()
 
         mealInstructionLabel.text = "Instructions:"
 
         mealInstructions.text = mealDetail.strInstructions
         mealInstructions.numberOfLines = 0
-        mealInstructions.sizeToFit()
         
         mealIngredientsLabel.text = "Ingredients:"
         
-        mealIngredients.text = listMealIngredients(ingredients: mealDetail.ingredients)
+        mealIngredients.text = mealDetail.mealIngredientsToString()
         mealIngredients.numberOfLines = 0
-        mealIngredients.sizeToFit()
         
         scrollView.layoutIfNeeded()
     }
@@ -179,19 +176,7 @@ class MealDetailVC: DBDataLoadingVC {
         }
     }
     
-    func listMealIngredients(ingredients: [Ingredient]) -> String {
-        var ingredientString = ""
-        for (index, ingredient) in ingredients.enumerated() {
-            ingredientString.append("\(ingredient.ingredient)")
-            if (!ingredient.measurement.isEmpty) {
-                ingredientString.append(" \(ingredient.measurement)")
-            }
-            if index < ingredients.count - 1 {
-                ingredientString.append(", ")
-            }
-        }
-        return ingredientString
-    }
+    
     
     @objc func dismissVC() {
         dismiss(animated: true)
