@@ -17,13 +17,10 @@
 		F29D957B27A5DAFC00F09876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29D957A27A5DAFC00F09876 /* Assets.xcassets */; };
 		F29D957E27A5DAFC00F09876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29D957C27A5DAFC00F09876 /* LaunchScreen.storyboard */; };
 		F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958527A5DD8500F09876 /* DBTabBarController.swift */; };
-		F29D958827A5E13000F09876 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958727A5E13000F09876 /* CategoryVC.swift */; };
 		F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D958927A5E25D00F09876 /* FavoritesListVC.swift */; };
 		F2FA54EC27A6546900D07E64 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54EB27A6546900D07E64 /* UIHelper.swift */; };
-		F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54EE27A6566800D07E64 /* MealCategory.swift */; };
 		F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F127A656F400D07E64 /* NetworkManager.swift */; };
 		F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F427A65D3000D07E64 /* DBError.swift */; };
-		F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */; };
 		F2FA54F927A661A200D07E64 /* DBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54F827A661A200D07E64 /* DBImageView.swift */; };
 		F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */; };
 		F2FA54FF27A719F300D07E64 /* DBBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */; };
@@ -54,13 +51,10 @@
 		F29D957D27A5DAFC00F09876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29D957F27A5DAFC00F09876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29D958527A5DD8500F09876 /* DBTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTabBarController.swift; sourceTree = "<group>"; };
-		F29D958727A5E13000F09876 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		F29D958927A5E25D00F09876 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		F2FA54EB27A6546900D07E64 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
-		F2FA54EE27A6566800D07E64 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 		F2FA54F127A656F400D07E64 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F2FA54F427A65D3000D07E64 /* DBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
-		F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryCell.swift; sourceTree = "<group>"; };
 		F2FA54F827A661A200D07E64 /* DBImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBImageView.swift; sourceTree = "<group>"; };
 		F2FA54FA27A6662400D07E64 /* DBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTitleLabel.swift; sourceTree = "<group>"; };
 		F2FA54FE27A719F300D07E64 /* DBBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBBodyLabel.swift; sourceTree = "<group>"; };
@@ -135,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				F29D958927A5E25D00F09876 /* FavoritesListVC.swift */,
-				F29D958727A5E13000F09876 /* CategoryVC.swift */,
 				F2FA551727A722D600D07E64 /* MealVC.swift */,
 				F2FA551F27A7352000D07E64 /* MealDetailVC.swift */,
 			);
@@ -154,7 +147,6 @@
 		F2FA54ED27A655B200D07E64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F2FA54EE27A6566800D07E64 /* MealCategory.swift */,
 				F2FA551927A72BF900D07E64 /* Meal.swift */,
 				F2576D0627B084EC00F2B50F /* MealDetail.swift */,
 			);
@@ -242,7 +234,6 @@
 		F2FA551227A7202500D07E64 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F2FA54F627A6610F00D07E64 /* MealCategoryCell.swift */,
 				F2FA551D27A7319D00D07E64 /* MealCell.swift */,
 				F23D042E27C01FFB00DAE656 /* MealDetailIngredientCell.swift */,
 			);
@@ -342,7 +333,6 @@
 				F2FA550627A71AB600D07E64 /* DBAlertContainerView.swift in Sources */,
 				F23D043527C0626F00DAE656 /* Constants.swift in Sources */,
 				F2FA551627A7210500D07E64 /* DBDataLoadingVC.swift in Sources */,
-				F2FA54EF27A6566800D07E64 /* MealCategory.swift in Sources */,
 				F29D958A27A5E25D00F09876 /* FavoritesListVC.swift in Sources */,
 				F2FA550927A71B2600D07E64 /* DBButton.swift in Sources */,
 				F29D958627A5DD8500F09876 /* DBTabBarController.swift in Sources */,
@@ -352,13 +342,11 @@
 				F2FA551A27A72BF900D07E64 /* Meal.swift in Sources */,
 				F2FA54F527A65D3000D07E64 /* DBError.swift in Sources */,
 				F23D043127C05B2100DAE656 /* PersistenceManager.swift in Sources */,
-				F2FA54F727A6610F00D07E64 /* MealCategoryCell.swift in Sources */,
 				F29D957227A5DAFB00F09876 /* AppDelegate.swift in Sources */,
 				F2FA54F227A656F400D07E64 /* NetworkManager.swift in Sources */,
 				F23D043327C0614D00DAE656 /* DBEmptyStateView.swift in Sources */,
 				F2FA552027A7352000D07E64 /* MealDetailVC.swift in Sources */,
 				F2FA54F927A661A200D07E64 /* DBImageView.swift in Sources */,
-				F29D958827A5E13000F09876 /* CategoryVC.swift in Sources */,
 				F2FA550C27A71C6100D07E64 /* UIView+Ext.swift in Sources */,
 				F2FA551827A722D600D07E64 /* MealVC.swift in Sources */,
 				F2FA54FB27A6662400D07E64 /* DBTitleLabel.swift in Sources */,

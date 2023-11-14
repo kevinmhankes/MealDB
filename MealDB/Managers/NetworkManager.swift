@@ -13,25 +13,10 @@ final class NetworkManager {
     let cache = NSCache<NSString, UIImage>()
     let decoder = JSONDecoder()
     
-    private let categoriesURL = baseURL + "categories.php"
     private let mealsURL = baseURL + "filter.php?c="
     private let recipesURL = baseURL + "lookup.php?i="
     
     private init() {}
-    
-    func getCategories() async throws -> [MealCategory] {
-        guard let url = URL(string: categoriesURL) else {
-            throw DBError.invalidURL
-        }
-        
-        let (data, _) = try await URLSession.shared.data(from: url)
-        
-        do {
-            return try decoder.decode(MealCategoryResponse.self, from: data).categories.sorted()
-        } catch {
-            throw DBError.invalidData
-        }
-    }
     
     func getMeals(for category: String) async throws -> [Meal] {
         guard let url = URL(string: "\(mealsURL)\(category)") else {

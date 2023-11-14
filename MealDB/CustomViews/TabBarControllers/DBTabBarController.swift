@@ -12,15 +12,15 @@ class DBTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().tintColor = .systemGreen
-        viewControllers = [createMealCategoryNC(), createFavoritesNC()]
+        viewControllers = [createDessertMealNC(), createFavoritesNC()]
     }
     
-    func createMealCategoryNC() -> UINavigationController {
-        let searchCategoryVC = CategoryVC()
-        searchCategoryVC.title = "Meal Categories"
-        searchCategoryVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+    func createDessertMealNC() -> UINavigationController {
+        let dessertMealVC = MealVC(category: "Dessert")
+        dessertMealVC.title = "Dessert Meals"
+        dessertMealVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
-        return UINavigationController(rootViewController: searchCategoryVC)
+        return UINavigationController(rootViewController: dessertMealVC)
     }
     
     func createFavoritesNC() -> UINavigationController {
